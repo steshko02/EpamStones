@@ -15,6 +15,9 @@ public class Necklace  {
     }
 
     public float fullCost() {
+        if(this.stones==null){
+            throw new NullPointerException();
+        }
         float cost=0;
         for(Stone stone : stones) {
             cost+=stone.getCost();
@@ -23,6 +26,9 @@ public class Necklace  {
     }
 //check, have 2 type of weight
     public float fullWeight() {
+        if(this.stones==null){
+            throw new NullPointerException();
+        }
         float  weight=0;
         for(Stone stone : stones) {
             if(stone instanceof  PreciousStone){
