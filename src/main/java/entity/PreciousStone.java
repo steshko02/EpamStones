@@ -1,8 +1,11 @@
 package entity;
 
-import characteristic.*;
+import characteristic.Color;
+import characteristic.PreciousStoneType;
+import characteristic.Transparency;
+
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.*;
 
 import java.util.Objects;
 
@@ -13,19 +16,11 @@ public class PreciousStone extends Stone{
     private float carat;
     private PreciousStoneType stoneType;
 
-    public PreciousStoneType getStoneType() {
-        return stoneType;
-    }
-
     public PreciousStone(Color color, Transparency transparency, float cost, float carat, PreciousStoneType stoneType) {
         super(color, transparency, cost);
         this.carat = carat;
         this.stoneType = stoneType;
         log.trace("constructor finished...");
-    }
-
-    public float getONE_CARAT() {
-        return ONE_CARAT;
     }
 
     @Override

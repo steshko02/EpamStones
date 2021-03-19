@@ -1,8 +1,10 @@
 package entity;
 
-import characteristic.*;
+import characteristic.Color;
+import characteristic.Transparency;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+
 import java.util.Objects;
 
 @Data
@@ -19,7 +21,7 @@ public class Stone {
         this.cost = cost;
     }
 
-    public  Stone(){}
+    public Stone(){}
 
     @Override
     public String toString() {

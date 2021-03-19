@@ -38,7 +38,7 @@ public class NecklaceTest {
     }
 
     @Test
-    public void SortByCost() {
+    public void sortByCost() {
         SortByCost.stonesSortByCost(underTest);
 
         List<Stone> actual = new ArrayList<>();
@@ -53,7 +53,6 @@ public class NecklaceTest {
     @Test(expected = NullPointerException.class)
     public void fullWeightNullPointerException() {
         Necklace expected = new Necklace(null);
-
         expected.fullWeight();
     }
 
