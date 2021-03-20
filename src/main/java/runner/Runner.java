@@ -8,9 +8,7 @@ import characteristic.Transparency;
 import entity.PreciousStone;
 import entity.SemiPreciousStone;
 import entity.Stone;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +22,7 @@ public class Runner {
         expected.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
         expected.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,333f,6, SemiPreciousStoneType.Epidote));
 
-        SortByCost.stonesSortByCost(expected);
+        SortByCost.sort(expected);
         System.out.println(expected);
         log.info("The application has finished working...");
     }

@@ -23,11 +23,11 @@ public class SortByCostTest {
     }
     @Test(expected = NullPointerException.class)
     public void fullCost()  {
-        SortByCost.stonesSortByCost(null);
+        SortByCost.sort(null);
     }
     @Test
     public void sortByCost() {
-        SortByCost.stonesSortByCost(underTest);
+        SortByCost.sort(underTest);
 
         List<Stone> actual = new ArrayList<>();
 
