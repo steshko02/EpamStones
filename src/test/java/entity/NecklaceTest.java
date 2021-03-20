@@ -18,7 +18,7 @@ public class NecklaceTest {
     public static void init(){
         underTest.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,2f, PreciousStoneType.Ruby));
         underTest.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,333f,6f, SemiPreciousStoneType.Epidote));
-        underTest.add(new Stone(5f,Color.Red, Transparency.Opaque, 1001f));
+        underTest.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,1001f,5f, SemiPreciousStoneType.Epidote));
     }
 
     @Test

@@ -17,9 +17,9 @@ public class SortByCostTest {
 
     @BeforeClass
     public static void init(){
-        underTest.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
-        underTest.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,333f,6, SemiPreciousStoneType.Epidote));
-        underTest.add(new Stone(8f,Color.Red, Transparency.Opaque, 1001f));
+        underTest.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20f, PreciousStoneType.Ruby));
+        underTest.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,333f,6f, SemiPreciousStoneType.Epidote));
+        underTest.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,1001f,5f, SemiPreciousStoneType.Epidote));
     }
 
     @Test(expected = NullPointerException.class)
@@ -33,9 +33,9 @@ public class SortByCostTest {
 
         List<Stone> actual = new ArrayList<>();
 
-        actual.add(new SemiPreciousStone(Color.Red, Transparency.SemiTranslucent,333f,6, SemiPreciousStoneType.Epidote));
-        actual.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
-        actual.add(new Stone(7f,Color.Red, Transparency.Opaque, 1001f));
+        actual.add(new SemiPreciousStone(Color.Red, Transparency.SemiTranslucent,333f,6f, SemiPreciousStoneType.Epidote));
+        actual.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20f, PreciousStoneType.Ruby));
+        actual.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,1001f,5f, SemiPreciousStoneType.Epidote));
 
         Assert.assertEquals(underTest,actual);
     }

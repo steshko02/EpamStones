@@ -20,9 +20,9 @@ public class SearchByTransparencyTest {
     public static void init(){
         underTest.add(new SemiPreciousStone(Color.Red, Transparency.SemiTranslucent,333f,6, SemiPreciousStoneType.Epidote));
         underTest.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
-        underTest.add(new Stone(7f,Color.Red, Transparency.Transparent, 1001f));
-        underTest.add(new Stone(7f,Color.Red, Transparency.Translucent, 1001f));
-        underTest.add(new Stone(7f,Color.Red, Transparency.Opaque, 1001f));
+        underTest.add(new PreciousStone(Color.Red, Transparency.Translucent, 1000f,20, PreciousStoneType.Ruby));
+        underTest.add(new SemiPreciousStone(Color.Red, Transparency.Translucent,333f,6, SemiPreciousStoneType.Epidote));
+        underTest.add(new SemiPreciousStone(Color.Red, Transparency.Opaque,333f,6, SemiPreciousStoneType.Epidote));
     }
 
     @Test
@@ -31,7 +31,8 @@ public class SearchByTransparencyTest {
 
         actual.add(new SemiPreciousStone(Color.Red, Transparency.SemiTranslucent,
                 333f,6, SemiPreciousStoneType.Epidote));
-        actual.add(new Stone(7f,Color.Red, Transparency.Translucent, 1001f));
+        actual.add( new PreciousStone(Color.Red, Transparency.Translucent, 1000f,20, PreciousStoneType.Ruby));
+        actual.add( new SemiPreciousStone(Color.Red, Transparency.Translucent,333f,6, SemiPreciousStoneType.Epidote));
 
         Assert.assertEquals(SearchByTransparency.search(underTest,
                 Transparency.Transparent, Transparency.Opaque),actual);
