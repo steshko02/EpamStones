@@ -10,12 +10,13 @@ import java.util.Objects;
 @Data
 @Slf4j
 public class Stone {
-
+    private float carat;
     private Color color;
     private Transparency transparency;
     private float cost;
 
-    public Stone(Color color, Transparency transparency, float cost) {
+    public Stone(float carat,Color color, Transparency transparency, float cost) {
+        this.carat= carat;
         this.color = color;
         this.transparency = transparency;
         this.cost = cost;

@@ -1,6 +1,6 @@
 package entity;
 
-import Sorting.SortByCost;
+import Service.Sorting.SortByCost;
 import characteristic.Color;
 import characteristic.PreciousStoneType;
 import characteristic.SemiPreciousStoneType;
@@ -19,12 +19,14 @@ public class SortByCostTest {
     public static void init(){
         underTest.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
         underTest.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,333f,6, SemiPreciousStoneType.Epidote));
-        underTest.add(new Stone(Color.Red, Transparency.Opaque, 1001f));
+        underTest.add(new Stone(8f,Color.Red, Transparency.Opaque, 1001f));
     }
+
     @Test(expected = NullPointerException.class)
     public void fullCost()  {
         SortByCost.sort(null);
     }
+
     @Test
     public void sortByCost() {
         SortByCost.sort(underTest);
@@ -33,7 +35,7 @@ public class SortByCostTest {
 
         actual.add(new SemiPreciousStone(Color.Red, Transparency.SemiTranslucent,333f,6, SemiPreciousStoneType.Epidote));
         actual.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
-        actual.add(new Stone(Color.Red, Transparency.Opaque, 1001f));
+        actual.add(new Stone(7f,Color.Red, Transparency.Opaque, 1001f));
 
         Assert.assertEquals(underTest,actual);
     }

@@ -1,7 +1,7 @@
 package characteristic;
 
 public enum Transparency {
-    Transparent,
+    Transparent ,
     Translucent,
     SemiTranslucent,
     Opaque

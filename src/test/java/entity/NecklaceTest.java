@@ -1,6 +1,5 @@
 package entity;
 
-import Sorting.SortByCost;
 import characteristic.Color;
 import characteristic.PreciousStoneType;
 import characteristic.SemiPreciousStoneType;
@@ -17,9 +16,9 @@ public class NecklaceTest {
 
     @BeforeClass
     public static void init(){
-        underTest.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
-        underTest.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,333f,6, SemiPreciousStoneType.Epidote));
-        underTest.add(new Stone(Color.Red, Transparency.Opaque, 1001f));
+        underTest.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,2f, PreciousStoneType.Ruby));
+        underTest.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,333f,6f, SemiPreciousStoneType.Epidote));
+        underTest.add(new Stone(5f,Color.Red, Transparency.Opaque, 1001f));
     }
 
     @Test
@@ -31,16 +30,18 @@ public class NecklaceTest {
         Assert.assertEquals(expected,actual, 0.0f);
     }
 
-    @Test(expected = ClassCastException.class)
-    public void fullWeightClassCastException() {
+    @Test
+    public void fullCarat(){
         Necklace necklace = new Necklace(underTest);
-        necklace.fullWeight();
+        float actual=2f+6f+5f;
+        float expected=necklace.fullCarat();
+        Assert.assertEquals(expected,actual, 0.0f);
     }
 
     @Test(expected = NullPointerException.class)
     public void fullWeightNullPointerException() {
         Necklace expected = new Necklace(null);
-        expected.fullWeight();
+        expected.fullCarat();
     }
 
     @Test(expected = NullPointerException.class)

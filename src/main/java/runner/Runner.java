@@ -1,6 +1,6 @@
 package runner;
 
-import Sorting.SortByCost;
+import Service.Sorting.SortByCost;
 import characteristic.Color;
 import characteristic.PreciousStoneType;
 import characteristic.SemiPreciousStoneType;
@@ -18,7 +18,7 @@ public class Runner {
     {
         log.info("The application started...");
         List<Stone> expected = new ArrayList<>();
-        expected.add(new Stone(Color.Red, Transparency.Opaque, 1001f));
+        expected.add(new Stone(4f,Color.Red, Transparency.Opaque, 1001f));
         expected.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
         expected.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,333f,6, SemiPreciousStoneType.Epidote));
 

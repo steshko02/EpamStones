@@ -26,25 +26,20 @@ public class Necklace  {
         }
         return  cost;
     }
-//check, have 2 type of weight
-    public float fullWeight() {
+
+    public float fullCarat() {
         if(this.stones==null){
             log.error("expected not null object");
             throw new NullPointerException();
         }
-        float  weight=0;
+
+        float  carat=0;
+
         for(Stone stone : stones) {
-            if(stone instanceof  PreciousStone){
-                weight+=((PreciousStone) stone).getCarat()*((PreciousStone) stone).getONE_CARAT();
-            }
-            else if (stone instanceof SemiPreciousStone){
-               weight+=((SemiPreciousStone) stone).getWeight();
-            }
-            else {
-                throw new ClassCastException("We have some problems.");
-            }
+            carat+=stone.getCarat();
         }
-        return  weight;
+
+        return carat;
     }
 }
 

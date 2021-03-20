@@ -12,22 +12,19 @@ import java.util.Objects;
 @Data
 @Slf4j
 public class PreciousStone extends Stone{
-    private final float ONE_CARAT=  0.2f; // mb make Interface
-    private float carat;
+
     private PreciousStoneType stoneType;
 
     public PreciousStone(Color color, Transparency transparency, float cost, float carat, PreciousStoneType stoneType) {
-        super(color, transparency, cost);
-        this.carat = carat;
+        super(carat,color, transparency, cost);
         this.stoneType = stoneType;
     }
 
     @Override
     public String toString() {
-        return super.toString() + "PreciousStone{" +
-                "carat=" + carat +
-                ", stoneType=" + stoneType +
-                "} " ;
+        return "PreciousStone{" +
+                "stoneType=" + stoneType +
+                "} " + super.toString();
     }
 
     @Override
@@ -36,11 +33,11 @@ public class PreciousStone extends Stone{
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         PreciousStone that = (PreciousStone) o;
-        return Float.compare(that.carat, carat) == 0 && stoneType == that.stoneType;
+        return stoneType == that.stoneType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), ONE_CARAT, carat, stoneType);
+        return Objects.hash(super.hashCode(), stoneType);
     }
 }
