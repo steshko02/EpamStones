@@ -18,7 +18,7 @@ import java.util.List;
 public class Runner {
     public static void main(String[] args)
     {
-        log.info("Application run...");
+        log.info("The application started...");
         List<Stone> expected = new ArrayList<>();
         expected.add(new Stone(Color.Red, Transparency.Opaque, 1001f));
         expected.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
@@ -26,6 +26,6 @@ public class Runner {
 
         SortByCost.stonesSortByCost(expected);
         System.out.println(expected);
-        log.info("Application finished...");
+        log.info("The application has finished working...");
     }
 }

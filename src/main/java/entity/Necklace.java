@@ -9,7 +9,7 @@ import java.util.List;
 @Slf4j
 public class Necklace  {
 
-    private List<Stone> stones; // mb rename
+    private List<Stone> stones;
 
     public Necklace(List<Stone> stones) {
         this.stones = stones;
@@ -17,6 +17,7 @@ public class Necklace  {
 
     public float fullCost() {
         if(this.stones==null){
+            log.error("expected not null object");
             throw new NullPointerException();
         }
         float cost=0;
@@ -28,6 +29,7 @@ public class Necklace  {
 //check, have 2 type of weight
     public float fullWeight() {
         if(this.stones==null){
+            log.error("expected not null object");
             throw new NullPointerException();
         }
         float  weight=0;

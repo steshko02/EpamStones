@@ -19,7 +19,6 @@ public class SemiPreciousStone extends Stone {
         super(color, transparency, cost);
         this.weight = weight;
         this.stoneType = stoneType;
-        log.trace("fdsfsdf");
     }
 
     @Override

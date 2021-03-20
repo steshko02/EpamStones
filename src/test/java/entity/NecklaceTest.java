@@ -37,19 +37,6 @@ public class NecklaceTest {
         necklace.fullWeight();
     }
 
-    @Test
-    public void sortByCost() {
-        SortByCost.stonesSortByCost(underTest);
-
-        List<Stone> actual = new ArrayList<>();
-
-        actual.add(new SemiPreciousStone(Color.Red,Transparency.SemiTranslucent,333f,6, SemiPreciousStoneType.Epidote));
-        actual.add(new PreciousStone(Color.Red, Transparency.Opaque, 1000f,20, PreciousStoneType.Ruby));
-        actual.add(new Stone(Color.Red, Transparency.Opaque, 1001f));
-
-        Assert.assertEquals(underTest,actual);
-    }
-
     @Test(expected = NullPointerException.class)
     public void fullWeightNullPointerException() {
         Necklace expected = new Necklace(null);

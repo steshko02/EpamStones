@@ -20,7 +20,6 @@ public class PreciousStone extends Stone{
         super(color, transparency, cost);
         this.carat = carat;
         this.stoneType = stoneType;
-        log.trace("constructor finished...");
     }
 
     @Override
