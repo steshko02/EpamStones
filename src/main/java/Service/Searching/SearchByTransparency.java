@@ -15,7 +15,7 @@ public class SearchByTransparency{
             throw  new IllegalArgumentException("The passed range boundaries are not correct.");
         }
         if(stones == null){
-            log.error("The passed range boundaries are not correct.");
+            log.error("Method receive null.");
             throw new NullPointerException("object is null");
         }
         return stones.stream()
