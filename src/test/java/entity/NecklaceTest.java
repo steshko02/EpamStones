@@ -4,15 +4,24 @@ import characteristic.Color;
 import characteristic.PreciousStoneType;
 import characteristic.SemiPreciousStoneType;
 import characteristic.Transparency;
+import javafx.beans.binding.When;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class NecklaceTest {
-    static  List<Stone> underTest = new ArrayList<>();
+
+   private static final List<Stone> underTest = new ArrayList<>();
 
     @BeforeClass
     public static void init(){
@@ -23,7 +32,6 @@ public class NecklaceTest {
 
     @Test
     public void fullCost() {
-
         Necklace necklace = new Necklace(underTest);
         float actual=1000f+1001f+333f;
         float expected=necklace.fullCost();

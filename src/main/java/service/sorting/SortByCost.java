@@ -1,12 +1,12 @@
-package service.Sorting;
+package service.sorting;
 
 import entity.Stone;
 import lombok.extern.slf4j.Slf4j;
 import java.util.List;
 
 @Slf4j
-public class SortByCost {
-    public static void sort(List<Stone> stones) {
+public class SortByCost implements Sort {
+    public void sort(List<Stone> stones) {
         if(stones==null){
             log.error("expected not null object");
             throw new NullPointerException("object is null");

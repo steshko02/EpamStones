@@ -17,7 +17,7 @@ import java.util.List;
 @Slf4j
 public class InitContext {
 
-    private static Stone createRandomStone() {
+    private Stone createRandomStone() {
         int i = Random.random(1,3);
         switch (i)
         {
@@ -41,7 +41,7 @@ public class InitContext {
         List<Stone> stones = new ArrayList<>();
 
         for (int i = 0; i<count; i++){
-            stones.add(InitContext.createRandomStone());
+            stones.add(createRandomStone());
         }
 
         return new Necklace(stones);

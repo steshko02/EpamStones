@@ -20,6 +20,7 @@ public class Necklace  {
             log.error("expected not null object");
             throw new NullPointerException("stones is null...");
         }
+
         float cost=0;
 
         for(Stone stone : stones) {

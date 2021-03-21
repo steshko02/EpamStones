@@ -13,6 +13,9 @@ public enum SemiPreciousStoneType  {
     Moonstone;
 
     public static SemiPreciousStoneType getElementByIndex(int index) {
+        if(index>= SemiPreciousStoneType.values().length){
+            throw new IllegalArgumentException("the transferred index is not suitable");
+        }
         return SemiPreciousStoneType.values()[index];
     }
 }

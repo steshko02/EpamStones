@@ -1,7 +1,10 @@
-package entity;
+package service.searching;
 
-import service.Searching.SearchByTransparency;
-import service.Sorting.SortByCost;
+import entity.PreciousStone;
+import entity.SemiPreciousStone;
+import entity.Stone;
+import service.searching.SearchByTransparency;
+import service.sorting.SortByCost;
 import characteristic.Color;
 import characteristic.PreciousStoneType;
 import characteristic.SemiPreciousStoneType;
@@ -34,18 +37,18 @@ public class SearchByTransparencyTest {
         actual.add( new PreciousStone(Color.Red, Transparency.Translucent, 1000f,20, PreciousStoneType.Ruby));
         actual.add( new SemiPreciousStone(Color.Red, Transparency.Translucent,333f,6, SemiPreciousStoneType.Epidote));
 
-        Assert.assertEquals(SearchByTransparency.search(underTest,
+        Assert.assertEquals(new SearchByTransparency().search(underTest,
                 Transparency.Translucent, Transparency.SemiTranslucent),actual);
     }
 
     @Test(expected = NullPointerException.class)
     public void SearchByTransparencyNullPointerException() {
-        SortByCost.sort(null);
+        new SortByCost().sort(null);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void SearchByTransparencyIllegalArgumentException() {
-        SearchByTransparency.search(underTest,Transparency.Opaque,  Transparency.Transparent);
+        new SearchByTransparency().search(underTest,Transparency.Opaque,  Transparency.Transparent);
     }
 
 }

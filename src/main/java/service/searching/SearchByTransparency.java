@@ -1,4 +1,4 @@
-package service.Searching;
+package service.searching;
 
 import characteristic.Transparency;
 import entity.Stone;
@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
-public class SearchByTransparency{
-    public  static  List<Stone> search(List<Stone> stones, Transparency initial, Transparency ultimate){
+public class SearchByTransparency implements Search{
+    public  List<Stone> search(List<Stone> stones, Transparency initial, Transparency ultimate){
 
         if(!(initial.compareTo(ultimate) < 0)){
             log.error("The passed range boundaries are not correct.");
@@ -26,4 +26,5 @@ public class SearchByTransparency{
                         compareTo(initial) >= 0 && item.getTransparency().
                         compareTo(ultimate)<=0)).collect(Collectors.toList());
     }
+
 }

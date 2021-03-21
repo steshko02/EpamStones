@@ -1,6 +1,8 @@
-package entity;
+package service.sorting;
 
-import service.Sorting.SortByCost;
+import entity.PreciousStone;
+import entity.SemiPreciousStone;
+import entity.Stone;
 import characteristic.Color;
 import characteristic.PreciousStoneType;
 import characteristic.SemiPreciousStoneType;
@@ -24,12 +26,12 @@ public class SortByCostTest {
 
     @Test(expected = NullPointerException.class)
     public void fullCost()  {
-        SortByCost.sort(null);
+        new SortByCost().sort(null);
     }
 
     @Test
     public void sortByCost() {
-        SortByCost.sort(underTest);
+        new SortByCost().sort(underTest);
 
         List<Stone> actual = new ArrayList<>();
 
