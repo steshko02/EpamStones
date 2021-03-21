@@ -23,8 +23,8 @@ public class SemiPreciousStone extends Stone {
      @Override
      public String toString() {
          return "SemiPreciousStone{" +
-                 "stoneType=" + stoneType +
-                 "} " + super.toString();
+                 "\nstoneType=" + stoneType
+                 + super.toString()+"\n";
      }
 
      @Override

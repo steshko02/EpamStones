@@ -5,5 +5,9 @@ public enum PreciousStoneType {
     Emerald,
     Ruby,
     Sapphire,
-    Pearls
+    Pearls;
+
+    public static PreciousStoneType getElementByIndex(int index) {
+        return PreciousStoneType.values()[index];
+    }
 }

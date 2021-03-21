@@ -1,11 +1,17 @@
 package characteristic;
 
-public enum Color {
+
+public enum Color  {
     Green,
     Blue,
     Purple,
     Red,
     Yellow,
-    White
+    White;
+
+    public static Color getElementByIndex(int index) {
+        return Color.values()[index];
+    }
 }
-//mb remake in class
+
+

@@ -1,7 +1,7 @@
 package entity;
 
-import Service.Searching.SearchByTransparency;
-import Service.Sorting.SortByCost;
+import service.Searching.SearchByTransparency;
+import service.Sorting.SortByCost;
 import characteristic.Color;
 import characteristic.PreciousStoneType;
 import characteristic.SemiPreciousStoneType;
@@ -35,7 +35,7 @@ public class SearchByTransparencyTest {
         actual.add( new SemiPreciousStone(Color.Red, Transparency.Translucent,333f,6, SemiPreciousStoneType.Epidote));
 
         Assert.assertEquals(SearchByTransparency.search(underTest,
-                Transparency.Transparent, Transparency.Opaque),actual);
+                Transparency.Translucent, Transparency.SemiTranslucent),actual);
     }
 
     @Test(expected = NullPointerException.class)

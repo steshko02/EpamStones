@@ -1,6 +1,6 @@
 package characteristic;
 
-public enum SemiPreciousStoneType {
+public enum SemiPreciousStoneType  {
     Garnet,
     Dioptase,
     Epidote,
@@ -10,5 +10,9 @@ public enum SemiPreciousStoneType {
     GreenTourmaline,
     ClearRockCrystal,
     Chalcedony,
-    Moonstone
+    Moonstone;
+
+    public static SemiPreciousStoneType getElementByIndex(int index) {
+        return SemiPreciousStoneType.values()[index];
+    }
 }

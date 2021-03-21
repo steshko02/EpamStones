@@ -1,4 +1,4 @@
-package Service.Sorting;
+package service.Sorting;
 
 import entity.Stone;
 import lombok.extern.slf4j.Slf4j;

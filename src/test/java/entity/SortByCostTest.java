@@ -1,6 +1,6 @@
 package entity;
 
-import Service.Sorting.SortByCost;
+import service.Sorting.SortByCost;
 import characteristic.Color;
 import characteristic.PreciousStoneType;
 import characteristic.SemiPreciousStoneType;

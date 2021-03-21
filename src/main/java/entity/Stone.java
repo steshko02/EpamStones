@@ -10,9 +10,13 @@ import java.util.Objects;
 @Data
 @Slf4j
 public class Stone {
+
     private float carat;
+
     private Color color;
+
     private Transparency transparency;
+
     private float cost;
 
     public Stone(float carat,Color color, Transparency transparency, float cost) {
@@ -26,11 +30,10 @@ public class Stone {
 
     @Override
     public String toString() {
-        return "Stone{" +
-                "color=" + color +
-                ", transparency=" + transparency +
-                ", cost=" + cost +
-                '}';
+        return  "\ncolor=" + color +
+                "\ntransparency=" + transparency +
+                "\ncarat=" + carat +
+                "\ncost=" + cost + "\n" ;
     }
 
     @Override
