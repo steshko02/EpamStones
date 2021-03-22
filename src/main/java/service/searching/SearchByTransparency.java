@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class SearchByTransparency implements Search{
     public  List<Stone> search(List<Stone> stones, Transparency initial, Transparency ultimate){
 
-        if(!(initial.compareTo(ultimate) < 0)){
+        if(!(initial.compareTo(ultimate) <= 0)){
             log.error("The passed range boundaries are not correct.");
             throw  new IllegalArgumentException("The passed range boundaries are not correct.");
         }
